@@ -92,5 +92,8 @@ input:-webkit-autofill:focus {
 
 footer{
     font-size: 26px;
+    font-family: "Fjalla One";
     text-decoration: none;
+    font-style:initial;
+    color: #f8f4e5;
 }
