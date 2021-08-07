@@ -91,18 +91,26 @@ function codificaTexto(){
     const texto = document.getElementById("InputTextoPlano");
     const textoPlano = texto.value;
     const input = document.getElementById("InputN");
-    const value = input.value;
-    console.log(value)
-    const res = codifica(String(textoPlano),Number(value))
-    alert(res)
+    const value = Number(input.value);
+    if(!value>0){
+        alert("Debes ingresar n mayor que cero")
+    }else{
+        console.log(value)
+        const res = codifica(String(textoPlano),value)
+        alert(res)
+    }
 }
 
 function decodificaTexto(){
     const texto = document.getElementById("InputTextoCodificado");
     const textoCodificado = texto.value;
     const input = document.getElementById("InputN");
-    const value = input.value;
-    console.log(value)
-    const res = decodifica(String(textoCodificado),Number(value))
-    alert(res)
+    const value = Number(input.value);
+    if(!value>0){
+        alert("Debes ingresar n mayor que cero")
+    }else{
+        console.log(value)
+        const res = decodifica(String(textoCodificado),value)
+        alert(res)
+    }
 }
