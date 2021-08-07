@@ -51,7 +51,7 @@ const ascii = [
     "÷",  "¸",   "°",   "¨",  "·",
     "¹",  "³",   "²",   "■",  " "
 ]
-// ¼¡«»░▒▓|┤½
+
 const limit = (ascii.length)-1
 
 
@@ -95,7 +95,7 @@ function codificaTexto(){
     if(!value > 0 || value >= 256){
         alert("Debes ingresar n mayor que cero y menor que 256")
     }else{
-        console.log(value)
+        //console.log(value)
         const res = codifica(String(textoPlano),value)
         resultado.value = res;
     }
@@ -109,7 +109,7 @@ function decodificaTexto(){
     if(!value > 0 || value >= 256){
         alert("Debes ingresar n mayor que cero y menor que 256")
     }else{
-        console.log(value)
+        //console.log(value)
         const res = decodifica(String(textoCodificado),value)
         resultado.value = res;
     }
