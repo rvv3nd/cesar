@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cesar.css">
+    
+    <script src="cesar.js"></script>
+    <title>Cesar Cipher</title>
+</head>
+<body>
+    <header>
+        <h1>Algoritmo de encriptación de Cesar</h1>
+        <h2>Curso de criptografía</h2>
+        <h3>Otoño 2021</h3>
+    </header>
+    <div class="cuadros">
+
+
+                <section class="cuadro">
+                    <h2>Texto plano</h2>
+                    <form>
+                        <label for="InputTextoPlano">
+                        </label>
+                        <input id="InputTextoPlano" type="text" placeholder="Hola mundo">
+                        <button type="button" onclick="codificaTexto()">Codificar</button>
+                    </form>
+                </section>
+
+                <section class="cuadro">
+                    <h2>Numero de <br> desplazamientos</h2>
+                    <label for="InputN"></label>
+                    <input id="InputN" type="number" placeholder="n" required>
+                </section>
+
+                <section class="cuadro">
+                    <h2>Texto codificado</h2>
+                    <form>
+                        <label for="InputTextoCodificado">
+                        </label>
+                        <input id="InputTextoCodificado" type="text" placeholder="ipmb!nvoep">
+                        <button type="button" onclick="decodificaTexto()">Decodificar</button>
+                    </form>
+                </section>
+
+ 
+
+        <!-- <section class="cuadro">
+            <h2>Resultados</h2>
+            <output id="resultado" class="output"></output>
+        </section> -->
+    </div>
+</body>
+<footer>
+    <div class="container">
+        <div class="col">
+            <a href="https://github.com/rvv3nd/cesar"><img src="https://img.icons8.com/material-sharp/24/000000/github.png"/>Código de la práctica</a>
+        </div>
+    </div>
+</footer>
+</html>
+
