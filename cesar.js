@@ -55,7 +55,6 @@ const ascii = [
 
 const limit = (ascii.length)-1
 
-
 function codifica(textoPlano, n){
     var index
     var textocodificado = ""
@@ -82,13 +81,15 @@ function decodifica(textoCodificado,n){
     return textoDecodificado
 }
 
+
+//funciones auxiliares para html
 function codificaTexto(){
     const texto = document.getElementById("InputTextoPlano");
     const textoPlano = texto.value;
     const input = document.getElementById("InputN");
     const value = Number(input.value);
-    if(!value > 0 || value >= 256){
-        alert("Debes ingresar n mayor que cero y menor que 256")
+    if(!value > 0 || value >= limit){
+        alert("Debes ingresar n mayor que cero y menor que "+limit)
     }else{
         //console.log(value)
         const res = codifica(String(textoPlano),value)
@@ -101,8 +102,8 @@ function decodificaTexto(){
     const textoCodificado = texto.value;
     const input = document.getElementById("InputN");
     const value = Number(input.value);
-    if(!value > 0 || value >= 256){
-        alert("Debes ingresar n mayor que cero y menor que 256")
+    if(!value > 0 || value >= limit){
+        alert("Debes ingresar n mayor que cero y menor que "+limit)
     }else{
         //console.log(value)
         const res = decodifica(String(textoCodificado),value)
