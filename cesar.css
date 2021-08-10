@@ -122,8 +122,8 @@ footer{
     align-content: center;
     font-size: 26px;
     font-family: "Fjalla One";
-    text-decoration: none;
     font-style:initial;
-    margin-top: 40px;
+    margin-top: 10px;
     color: #f8f4e5;
 }
+a{text-decoration: none;}
