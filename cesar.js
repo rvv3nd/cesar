@@ -1,12 +1,12 @@
 const ascii = [
-    "NULL","SOH","STX","ETX", "EOT",
-    "ENQ","ACK", "BEL", "BS", "HT",
-    "LF", "VT",  "FF",  "CR", "SO",
-    "SI", "DLE", "DC1", "DC2","DC3",    
-    "DC4","NAK", "SYN", "ETB","CAN",
-    "EM", "SUB", "ESC", "FS", "GS",
-    "RS", "US",  "DEL", 
-    " ",   "!",   "\"", "#",    
+    "␀","␁","␂", "␃","␄",
+    "␅","␆", "␇", "␈", "␉",
+    "␊", "␋",  "␌",  "␍", "␎",
+    "␏", "␐", "␑", "␒","␓",    
+    "␔","␕", "␖", "␗","␘",
+    "␙", "␚", "␛", "␜", "␝",
+    "␞", "␟",  "␡", 
+    " ",  "!",   "\"", "#",    
     "$",  "%",   "&",   "'",  "(",    
     ")",  "*",   "+",   ",",  "-",    
     ".",  "/",   "0",   "1",  "2",    
@@ -25,7 +25,7 @@ const ascii = [
     "o",  "p",   "q",   "r",  "s",    
     "t",  "u",   "v",   "w",  "x",    
     "y",  "z",   "{",   "|",  "}",    
-    "~",  "" ,   "Ç",   "ü",  "é",
+    "~",  "_",   "Ç",   "ü",  "é",
     "â",  "ä",   "à",   "å",  "ç",
     "ê",  "ë",   "è",   "ï",  "î",
     "ì",  "Ä",   "Å",   "É",  "æ",
@@ -38,6 +38,7 @@ const ascii = [
     "░",  "▒",   "▓",   "│",  "┤",
     "Á",  "Â",   "À",   "©",  "╣",
     "║",  "╗",   "╝",   "¢",  "¥",
+    "┐",  "└",   "┴",   "┬",  "├",    
     "─",  "┼",   "ã",   "Ã",  "╚",
     "╔",  "╩",   "╦",   "╠",  "═",
     "╬",  "¤",   "ð",   "Ð",  "Ê",
@@ -60,12 +61,9 @@ function codifica(textoPlano, n){
     var textocodificado = ""
     for(letra of textoPlano){
         index = ascii.indexOf(letra) + n
-        //console.log(`prev: ${index}`)
         if (index > limit){
             index -= limit
         }
-        //console.log(`real: ${index}`)
-        //ascii[index]
         textocodificado += ascii[index]
     }
     return textocodificado
@@ -75,13 +73,10 @@ function decodifica(textoCodificado,n){
     var index
     var textoDecodificado = ""
     for(letra of textoCodificado){
-        index = ascii.indexOf(letra) - n
-        // console.log(`prev: ${index}`) 
+        index = ascii.indexOf(letra) - n 
         if (index < 0){
             index += limit
         }
-        // console.log(`real: ${index}`)
-        // ascii[index]
         textoDecodificado+= ascii[index]
     }
     return textoDecodificado
