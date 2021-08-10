@@ -88,7 +88,7 @@ function codificaTexto(){
     const textoPlano = texto.value;
     const input = document.getElementById("InputN");
     const value = Number(input.value);
-    if(!value <= 0 || value >= limit){
+    if(value <= 0 || value >= limit){
         alert("Debes ingresar n mayor que cero y menor que "+limit)
     }else{
         //console.log(value)
