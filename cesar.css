@@ -23,11 +23,33 @@ body {
   align-items: center;
   justify-items: center;
 }
-.cuadros{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "testoPlano n testoCodificado"
+    ". resultado .";
 }
+
+.testoPlano { grid-area: testoPlano; }
+
+.n { 
+  grid-area: n; 
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+}
+
+.testoCodificado { 
+  grid-area: testoCodificado; 
+}
+
+.resultado { grid-area: resultado; }
+
 .cuadro {
   display: grid;
   align-items: center;
@@ -35,9 +57,13 @@ body {
   background: #f8f4e5;
   margin: 0px 40px;
   padding: 50px 100px;
+  max-width: 200px;
+  max-height: 200px;
+  overflow: scroll;
   border: 2px solid black;
   box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
 }
+
 
 input {
   display: block;
@@ -92,10 +118,12 @@ input:-webkit-autofill:focus {
 }
 
 footer{
+    display: block;
+    align-content: center;
     font-size: 26px;
     font-family: "Fjalla One";
     text-decoration: none;
     font-style:initial;
+    margin-top: 40px;
     color: #f8f4e5;
-
 }
