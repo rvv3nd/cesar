@@ -26,12 +26,37 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "testoPlano n testoCodificado"
-    ". resultado .";
+    "testoPlano n testoCodificado";
+}
+.container_resultado {
+  display: grid; 
+  grid-template-columns: 0.5fr 2fr 0.5fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". resultado ."; 
+  justify-content: center; 
+  align-content: space-around; 
+  align-items: center;  
+  position: relative;
+}
+.resultado { 
+  grid-area: resultado; 
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  background: #f8f4e5;
+  margin: 0px 40px;
+  padding: 50px 100px;
+  max-width: 400px;
+  max-height: 150px;
+  overflow: scroll;
+  border: 2px solid black;
+  box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
 }
 
 .testoPlano { grid-area: testoPlano; }
@@ -48,7 +73,6 @@ body {
   grid-area: testoCodificado; 
 }
 
-.resultado { grid-area: resultado; }
 
 .cuadro {
   display: grid;
@@ -85,6 +109,8 @@ input {
 input:focus {
   border-bottom: 5px solid #ffa580;
 }
+
+
 
 button {
   display: block;
